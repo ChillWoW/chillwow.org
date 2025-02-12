@@ -65,7 +65,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
                 <div className="project-card-links">
                     {project.github && (
-                        <Tooltip label="View on GitHub" position="top">
+                        <Tooltip label="View Source Code" position="top">
                             <Link href={project.github} target="_blank">
                                 <Button>
                                     <IconBrandGithub size={18} />
@@ -76,7 +76,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     {project.discord && (
                         <Tooltip label="Join Discord" position="top">
                             <Link href={project.discord} target="_blank">
-                                <Button className="bg-blue-500 hover:bg-blue-600">
+                                <Button>
                                     <IconBrandDiscord size={18} />
                                 </Button>
                             </Link>
