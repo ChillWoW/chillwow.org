@@ -11,6 +11,8 @@ import "./style.css";
 import Skills from "@/components/Skills";
 import projects from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import ContactInfo from "@/components/ContactInfo";
+import LinksInfo from "@/components/LinksInfo";
 
 export default function Home() {
     return (
@@ -18,15 +20,25 @@ export default function Home() {
             <Navbar />
             <main className="content">
                 <motion.div {...fadeIn} className="section">
-                    <div className="flex flex-col">
-                        <Text size="xl" weight="bold" className="text-white">
-                            Hi, I'm Eeka
-                        </Text>
-                        <Text size="md" className="text-gray-300" italic>
-                            I'm a full stack developer
-                        </Text>
+                    <div className="flex flex-col gap-3">
+                        <div className="flex flex-col">
+                            <Text
+                                size="xl"
+                                weight="bold"
+                                className="text-white"
+                            >
+                                Hi, I'm Eeka
+                            </Text>
+                            <Text size="md" className="text-gray-300" italic>
+                                Full Stack Developer
+                            </Text>
+                        </div>
 
-                        <motion.div {...slideInLeft} className="flex mt-10">
+                        <motion.div {...slideInLeft}>
+                            <LinksInfo />
+                        </motion.div>
+
+                        <motion.div {...slideInLeft}>
                             <PersonalInfo />
                         </motion.div>
                     </div>
@@ -74,6 +86,7 @@ export default function Home() {
                     </div>
                 </motion.div>
             </main>
+            <ContactInfo />
         </div>
     );
 }
