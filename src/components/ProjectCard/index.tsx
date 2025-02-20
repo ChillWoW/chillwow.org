@@ -26,12 +26,11 @@ export default function ProjectCard({ project }: { project: Project }) {
                 )}
                 {project.status && (
                     <Badge
-                        className="project-card-status"
-                        color={
+                        className={`project-card-status text-white ${
                             project.status === "completed"
-                                ? hexToRgba("00FF00", 0.2)
-                                : undefined
-                        }
+                                ? "bg-green-500/30"
+                                : "bg-blue-600/50"
+                        }`}
                     >
                         {project.status}
                     </Badge>
@@ -48,7 +47,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
                 <div className="project-card-technologies">
                     {project.technologies.map((tech: any, i: any) => (
-                        <Badge key={i} className="bg-dark-600">
+                        <Badge key={i} className="bg-dark-600 text-white">
                             {tech}
                         </Badge>
                     ))}
@@ -67,7 +66,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     {project.github && (
                         <Tooltip label="View Source Code" position="top">
                             <Link href={project.github} target="_blank">
-                                <Button>
+                                <Button className="bg-white text-black hover:bg-gray-200">
                                     <IconBrandGithub size={18} />
                                 </Button>
                             </Link>
@@ -76,7 +75,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     {project.discord && (
                         <Tooltip label="Join Discord" position="top">
                             <Link href={project.discord} target="_blank">
-                                <Button>
+                                <Button className="bg-blue-400 text-black hover:bg-blue-500">
                                     <IconBrandDiscord size={18} />
                                 </Button>
                             </Link>
