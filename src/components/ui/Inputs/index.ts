@@ -3,6 +3,9 @@ export * from "./TextInput";
 export * from "./PasswordInput";
 export * from "./TextArea";
 export * from "./SelectInput";
+export * from "./ColorPicker";
+export * from "./PinInput";
+export * from "./DatePickerInput";
 
 export const defaultInputContainerClass = "flex flex-col gap-1";
 

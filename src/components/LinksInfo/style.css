@@ -1,17 +1,17 @@
 .links-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .link-button {
-    background-color: var(--dark-700);
-    border: 1px solid var(--dark-500);
-    color: var(--gray-300);
+  background-color: var(--dark-700);
+  border: 1px solid var(--dark-500);
+  color: var(--gray-300);
 }
 
 .link-button:hover {
-    background-color: var(--dark-600);
-    border: 1px solid var(--dark-400);
-    color: var(--gray-200);
+  background-color: var(--dark-600);
+  border: 1px solid var(--dark-400);
+  color: var(--gray-200);
 }

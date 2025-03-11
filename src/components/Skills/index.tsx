@@ -12,7 +12,7 @@ export default function Skills() {
         <Text size="xl" weight="bold" className="text-white">
           Current Tools I Use
         </Text>
-        <Text size="sm" className="text-gray-300" italic>
+        <Text size="sm" className="text-gray-400" italic>
           These are my current tools for development.
         </Text>
       </div>
