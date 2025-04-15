@@ -15,62 +15,100 @@ import ContactInfo from "@/components/ContactInfo";
 import LinksInfo from "@/components/LinksInfo";
 
 export default function Home() {
-  return (
-    <div className="wrapper">
-      <Navbar />
-      <main className="content">
-        <motion.div {...fadeIn} className="section">
-          <div className="flex flex-col gap-3">
-            <div className="flex flex-col">
-              <Text size="xl" weight="bold" className="text-white">
-                Hi, I'm Eeka
-              </Text>
-              <Text size="md" className="text-gray-400" italic>
-                Full Stack Developer
-              </Text>
+    return (
+        <div className="relative min-h-screen">
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10 p-4 max-h-screen">
+                <div className="bg-dark-800 p-8 rounded-lg shadow-lg text-center max-w-md">
+                    <Text size="xl" weight="bold" className="text-white mb-4">
+                        Website is getting rebuilt
+                    </Text>
+                    <Link
+                        href="https://github.com/chillwow"
+                        target="_blank"
+                        className="inline-block"
+                    >
+                        <Button>Visit GitHub</Button>
+                    </Link>
+                </div>
             </div>
 
-            <motion.div {...slideInLeft}>
-              <LinksInfo />
-            </motion.div>
+            {/* Blurred content */}
+            <div className="wrapper blur-sm">
+                <Navbar />
+                <main className="content">
+                    <motion.div {...fadeIn} className="section">
+                        <div className="flex flex-col gap-3">
+                            <div className="flex flex-col">
+                                <Text
+                                    size="xl"
+                                    weight="bold"
+                                    className="text-white"
+                                >
+                                    Hi, I'm Eeka
+                                </Text>
+                                <Text
+                                    size="md"
+                                    className="text-gray-400"
+                                    italic
+                                >
+                                    Full Stack Developer
+                                </Text>
+                            </div>
 
-            <motion.div {...slideInLeft}>
-              <PersonalInfo />
-            </motion.div>
-          </div>
-        </motion.div>
+                            <motion.div {...slideInLeft}>
+                                <LinksInfo />
+                            </motion.div>
 
-        <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="section">
-          <Skills />
-        </motion.div>
+                            <motion.div {...slideInLeft}>
+                                <PersonalInfo />
+                            </motion.div>
+                        </div>
+                    </motion.div>
 
-        <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="section">
-          <div className="flex justify-between">
-            <div className="flex flex-col">
-              <Text size="xl" weight="bold" className="text-white">
-                Some of my projects
-              </Text>
-              <Text
-                size="sm"
-                className="projects-description text-gray-400"
-                italic
-              >
-                Here are some of my projects that I've worked on or I'm
-                currently working on
-              </Text>
+                    <motion.div
+                        {...fadeIn}
+                        transition={{ delay: 0.2 }}
+                        className="section"
+                    >
+                        <Skills />
+                    </motion.div>
+
+                    <motion.div
+                        {...fadeIn}
+                        transition={{ delay: 0.2 }}
+                        className="section"
+                    >
+                        <div className="flex justify-between">
+                            <div className="flex flex-col">
+                                <Text
+                                    size="xl"
+                                    weight="bold"
+                                    className="text-white"
+                                >
+                                    Some of my projects
+                                </Text>
+                                <Text
+                                    size="sm"
+                                    className="projects-description text-gray-400"
+                                    italic
+                                >
+                                    Here are some of my projects that I've
+                                    worked on or I'm currently working on
+                                </Text>
+                            </div>
+                            <Link href="/projects">
+                                <Button>All Projects</Button>
+                            </Link>
+                        </div>
+                        <div className="projects-preview">
+                            {projects.slice(0, 2).map((project, index) => (
+                                <ProjectCard key={index} project={project} />
+                            ))}
+                        </div>
+                    </motion.div>
+                </main>
+                <ContactInfo />
             </div>
-            <Link href="/projects">
-              <Button>All Projects</Button>
-            </Link>
-          </div>
-          <div className="projects-preview">
-            {projects.slice(0, 2).map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
-        </motion.div>
-      </main>
-      <ContactInfo />
-    </div>
-  );
+        </div>
+    );
 }
