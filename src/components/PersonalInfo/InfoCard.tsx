@@ -1,4 +1,4 @@
-import { Icon, Text } from "@luminx/core";
+import { Text } from "@byteform/core";
 
 interface InfoCardProps {
     icon: React.ReactNode;
@@ -8,15 +8,13 @@ interface InfoCardProps {
 
 export default function InfoCard({ icon, title, value }: InfoCardProps) {
     return (
-        <div className="flex flex-col items-center justify-center gap-2 bg-dark-800 p-4 rounded-lg">
-            <Icon className="bg-transparent text-[var(--luminx-blue-5)]">
-                {icon}
-            </Icon>
+        <div className="flex flex-col items-center justify-center gap-2 bg-dark-800 p-4 rounded-md hover:scale-[1.01] transition-all duration-200">
+            <div className="text-blue-500 pb-1">{icon}</div>
             <div className="flex flex-col gap-2">
                 <Text
                     size="md"
-                    weight="semibold"
-                    className="text-gray-300"
+                    weight="medium"
+                    className="text-dark-100"
                     align="center"
                 >
                     {title}
@@ -24,7 +22,7 @@ export default function InfoCard({ icon, title, value }: InfoCardProps) {
                 <Text
                     size="md"
                     weight="bold"
-                    className="text-gray-100"
+                    className="text-white"
                     align="center"
                 >
                     {value}

@@ -1,25 +1,25 @@
-import { Anchor, Badge, Card, Text, Title } from "@luminx/core";
+import { Anchor, Badge, Card, Text } from "@byteform/core";
 import { Project } from "./projects";
 
 const badgeConfig = {
     completed: {
-        className: "bg-[var(--luminx-green-light-5)]",
+        className: "bg-emerald-600/20 text-emerald-200",
         label: "Completed"
     },
     active: {
-        className: "bg-[var(--luminx-blue-light-5)]",
+        className: "bg-blue-600/20 text-blue-200",
         label: "Active"
     },
     paused: {
-        className: "bg-[var(--luminx-yellow-light-5)]",
+        className: "bg-yellow-600/20 text-yellow-200",
         label: "Paused"
     },
     planned: {
-        className: "bg-[var(--luminx-gray-light-5)]",
+        className: "bg-gray-600/20 text-gray-200",
         label: "Planned"
     },
     "not-maintained": {
-        className: "bg-[var(--luminx-red-light-5)]",
+        className: "bg-red-600/20 text-red-200",
         label: "Not Maintained"
     }
 };
@@ -31,19 +31,17 @@ export default function ProjectCard({
     status
 }: Project) {
     return (
-        <Card className="bg-dark-800 border border-dark-700 p-4 h-full flex flex-col hover:scale-[1.01] transition-all duration-200">
+        <Card className="relative bg-dark-800 border border-dark-700 p-4 h-full flex flex-col hover:scale-[1.01] transition-all duration-200">
             <div className="flex items-center justify-between">
-                <Title weight="bold" order={4}>
-                    {name}
-                </Title>
-                <Badge className={badgeConfig[status].className}>
+                <h4 className="text-lg font-bold">{name}</h4>
+                <Badge className={badgeConfig[status].className} size="md">
                     {badgeConfig[status].label}
                 </Badge>
             </div>
-            <Text className="text-dark-100 mb-3 flex-grow">{description}</Text>
+            <Text className="text-dark-100 flex-grow">{description}</Text>
 
             {links.length > 0 && (
-                <div className="flex items-center gap-3 pt-2 border-t border-dark-700 mt-auto">
+                <div className="absolute bottom-0 left-0 w-full flex items-center justify-center gap-3 pt-2 mb-2 border-t border-dark-600 mt-auto">
                     {links.map((link) => (
                         <Anchor
                             key={link.name}

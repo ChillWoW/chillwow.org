@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconBrandNpm, IconWorld } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandNpm } from "@tabler/icons-react";
 
 type ProjectStatus =
     | "completed"
@@ -22,9 +22,27 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        name: "Byteform",
+        description:
+            "A responsive UI library for React, built with Tailwind CSS and TypeScript.",
+        links: [
+            {
+                name: "GitHub",
+                url: "https://github.com/byteformdev/byteform",
+                icon: <IconBrandGithub />
+            },
+            {
+                name: "NPM",
+                url: "https://www.npmjs.com/package/@byteform/core",
+                icon: <IconBrandNpm />
+            }
+        ],
+        status: "active"
+    },
+    {
         name: "LuminX",
         description:
-            "A modern, responsive, and customizable UI library for React.",
+            "A modern, responsive, and customizable UI library for React. This was my first ever UI library and I learned a lot from it. Now deprecated in favor of Byteform.",
         links: [
             {
                 name: "GitHub",
@@ -35,13 +53,8 @@ export const projects: Project[] = [
                 name: "NPM",
                 url: "https://www.npmjs.com/package/@luminx/core",
                 icon: <IconBrandNpm />
-            },
-            {
-                name: "Website",
-                url: "https://ui.chillwow.org",
-                icon: <IconWorld />
             }
         ],
-        status: "active"
+        status: "not-maintained"
     }
 ];

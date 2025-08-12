@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor, cx, Text } from "@luminx/core";
+import { Anchor, cx, Text } from "@byteform/core";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks";
@@ -50,15 +50,6 @@ export default function Navbar() {
         >
             <div className="bg-dark-800 border-b border-dark-600">
                 <div className="container mx-auto h-16 px-4 py-4 flex items-center">
-                    <Anchor
-                        href="/"
-                        underline="never"
-                        className={useIsMobile() ? "hidden" : ""}
-                    >
-                        <Text size="xl" weight="bold">
-                            ChillWoW
-                        </Text>
-                    </Anchor>
                     <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-4">
                         {navItems.map((item) => (
                             <Anchor
@@ -68,8 +59,8 @@ export default function Navbar() {
                                 className={cx(
                                     "text-sm font-medium px-3 py-2 rounded-md transition-colors",
                                     isActive(item.href)
-                                        ? "text-white bg-dark-700"
-                                        : "text-dark-100 hover:text-white hover:bg-dark-700"
+                                        ? "text-white bg-dark-600"
+                                        : "text-dark-100 hover:text-white hover:bg-dark-600"
                                 )}
                                 aria-current={
                                     isActive(item.href) ? "page" : undefined

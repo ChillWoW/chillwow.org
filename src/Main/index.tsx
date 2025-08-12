@@ -2,7 +2,7 @@
 
 import PersonalInfo from "@/components/PersonalInfo";
 import Skills from "@/components/Skills";
-import { Transition, Text, Button } from "@luminx/core";
+import { Transition, Text, Button } from "@byteform/core";
 import { IconArrowDown, IconBrandGithub, IconMail } from "@tabler/icons-react";
 
 export default function Main() {
@@ -22,11 +22,11 @@ export default function Main() {
                                     className="text-white leading-tight"
                                 >
                                     Hi, I'm{" "}
-                                    <span className="bg-gradient-to-r from-[var(--luminx-blue-5)] to-[var(--luminx-purple-5)] bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-blue-500 to-purple-100 bg-clip-text text-transparent">
                                         Eeka
                                     </span>
                                 </Text>
-                                <Text size="md" className="text-gray-400">
+                                <Text size="md" className="text-dark-200">
                                     Full Stack Developer
                                 </Text>
                             </div>
@@ -46,16 +46,16 @@ export default function Main() {
                             style={styles}
                         >
                             <Button
-                                as="a"
+                                component="a"
                                 href="https://github.com/ChillWoW"
-                                leftSection={<IconBrandGithub size={18} />}
+                                leftSection={<IconBrandGithub size={20} />}
                             >
                                 GitHub
                             </Button>
                             <Button
-                                as="a"
+                                component="a"
                                 href="mailto:shilliwowi@gmail.com"
-                                rightSection={<IconMail size={18} />}
+                                rightSection={<IconMail size={20} />}
                             >
                                 Email
                             </Button>
@@ -73,7 +73,7 @@ export default function Main() {
                         <div style={styles} className="pt-12">
                             <IconArrowDown
                                 size={40}
-                                className="text-gray-400 animate-bounce mx-auto"
+                                className="text-dark-100 animate-bounce mx-auto"
                             />
                         </div>
                     )}
@@ -100,7 +100,7 @@ export default function Main() {
                                 </Text>
                                 <Text
                                     size="lg"
-                                    className="text-gray-400 max-w-2xl mx-auto"
+                                    className="text-dark-100 max-w-2xl mx-auto"
                                     align="center"
                                 >
                                     Here's some information about my background,
@@ -132,7 +132,7 @@ export default function Main() {
                                 </Text>
                                 <Text
                                     size="lg"
-                                    className="text-gray-400 max-w-2xl mx-auto"
+                                    className="text-dark-100 max-w-2xl mx-auto"
                                     align="center"
                                 >
                                     Here is all the programming languages,

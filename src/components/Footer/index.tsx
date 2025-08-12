@@ -1,4 +1,4 @@
-import { Text } from "@luminx/core";
+import { Text } from "@byteform/core";
 import { IconBrandGithub, IconMail } from "@tabler/icons-react";
 
 export default function Footer() {
@@ -7,8 +7,8 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <Text className="text-sm text-dark-100" align="center">
-                        © {new Date().getFullYear()} ChillWoW. Crafting websites
-                        with passion and coffee.
+                        © {new Date().getFullYear()} ChillWoW. Making the
+                        internet 0.001% better.
                     </Text>
                     <div className="flex space-x-4 text-dark-100 text-xl">
                         <a
