@@ -7,10 +7,17 @@ import {
     IconBrandTypescript
 } from "@tabler/icons-react";
 import SkillCard from "./SkillCard";
+import { SimpleGrid } from "@byteform/core";
 
 export default function Skills() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <SimpleGrid
+            breakpoints={{
+                sm: 1,
+                md: 2,
+                lg: 3
+            }}
+        >
             <SkillCard
                 name="Typescript"
                 icon={<IconBrandTypescript />}
@@ -41,6 +48,6 @@ export default function Skills() {
                 icon={<IconBrandPython />}
                 className="bg-yellow-500/20 text-yellow-200"
             />
-        </div>
+        </SimpleGrid>
     );
 }

@@ -1,4 +1,8 @@
-import { IconBrandGithub, IconBrandNpm } from "@tabler/icons-react";
+import {
+    IconBrandGithub,
+    IconBrandNpm,
+    IconWorldWww
+} from "@tabler/icons-react";
 
 type ProjectStatus =
     | "completed"
@@ -40,21 +44,23 @@ export const projects: Project[] = [
         status: "active"
     },
     {
-        name: "LuminX",
+        name: "URL Shortener",
         description:
-            "A modern, responsive, and customizable UI library for React. This was my first ever UI library and I learned a lot from it. Now deprecated in favor of Byteform.",
+            "A URL shortener built with Next.js and Tailwind CSS. It's a simple URL shortener that allows you to shorten long URLs to a shorter one.",
         links: [
             {
-                name: "GitHub",
-                url: "https://github.com/ChillWoW/luminx",
-                icon: <IconBrandGithub />
-            },
-            {
-                name: "NPM",
-                url: "https://www.npmjs.com/package/@luminx/core",
-                icon: <IconBrandNpm />
+                name: "Website",
+                url: "https://url.chillwow.org",
+                icon: <IconWorldWww />
             }
         ],
         status: "not-maintained"
+    },
+    {
+        name: "API Monitor",
+        description:
+            "A simple API monitor that allows you to monitor the status of your APIs. Still in the planning phase.",
+        links: [],
+        status: "planned"
     }
 ];

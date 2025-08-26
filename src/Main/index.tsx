@@ -21,10 +21,7 @@ export default function Main() {
                                     weight="bold"
                                     className="text-white leading-tight"
                                 >
-                                    Hi, I'm{" "}
-                                    <span className="bg-gradient-to-r from-blue-500 to-purple-100 bg-clip-text text-transparent">
-                                        Eeka
-                                    </span>
+                                    Hi, I'm Eeka
                                 </Text>
                                 <Text size="md" className="text-dark-200">
                                     Full Stack Developer

@@ -1,4 +1,4 @@
-import { Text } from "@byteform/core";
+import { Group, Text } from "@byteform/core";
 
 interface InfoCardProps {
     icon: React.ReactNode;
@@ -9,8 +9,8 @@ interface InfoCardProps {
 export default function InfoCard({ icon, title, value }: InfoCardProps) {
     return (
         <div className="flex flex-col items-center justify-center gap-2 bg-dark-800 p-4 rounded-md hover:scale-[1.01] transition-all duration-200">
-            <div className="text-blue-500 pb-1">{icon}</div>
-            <div className="flex flex-col gap-2">
+            <div className="text-blue-400 pb-1">{icon}</div>
+            <Group justify="center" align="center" gap="xs" direction="column">
                 <Text
                     size="md"
                     weight="medium"
@@ -27,7 +27,7 @@ export default function InfoCard({ icon, title, value }: InfoCardProps) {
                 >
                     {value}
                 </Text>
-            </div>
+            </Group>
         </div>
     );
 }

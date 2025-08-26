@@ -1,4 +1,4 @@
-import { Anchor, Badge, Card, Text } from "@byteform/core";
+import { Anchor, Badge, Group, Text } from "@byteform/core";
 import { Project } from "./projects";
 
 const badgeConfig = {
@@ -31,31 +31,38 @@ export default function ProjectCard({
     status
 }: Project) {
     return (
-        <Card className="relative bg-dark-800 border border-dark-700 p-4 h-full flex flex-col hover:scale-[1.01] transition-all duration-200">
-            <div className="flex items-center justify-between">
-                <h4 className="text-lg font-bold">{name}</h4>
+        <div className="bg-dark-800 border border-dark-700 p-6 flex flex-col shadow-sm h-full">
+            <Group justify="between" align="center" className="mb-4">
+                <Text size="lg" weight="bold" className="text-white">
+                    {name}
+                </Text>
                 <Badge className={badgeConfig[status].className} size="md">
                     {badgeConfig[status].label}
                 </Badge>
-            </div>
-            <Text className="text-dark-100 flex-grow">{description}</Text>
+            </Group>
+
+            <Text className="text-dark-100 leading-relaxed flex-grow">
+                {description}
+            </Text>
 
             {links.length > 0 && (
-                <div className="absolute bottom-0 left-0 w-full flex items-center justify-center gap-3 pt-2 mb-2 border-t border-dark-600 mt-auto">
-                    {links.map((link) => (
-                        <Anchor
-                            key={link.name}
-                            href={link.url}
-                            target="_blank"
-                            underline="never"
-                            className="flex items-center gap-2 text-dark-300 hover:text-white transition-colors duration-200 text-sm"
-                        >
-                            {link.icon}
-                            {link.name}
-                        </Anchor>
-                    ))}
+                <div className="border-t border-dark-600 pt-4 mt-6">
+                    <Group justify="center" align="center" gap="md">
+                        {links.map((link) => (
+                            <Anchor
+                                key={link.name}
+                                href={link.url}
+                                target="_blank"
+                                underline="never"
+                                className="flex items-center gap-2 text-dark-300 hover:text-blue-400 transition-colors duration-200 text-sm font-medium px-2 py-1 rounded hover:bg-dark-700/50"
+                            >
+                                <span className="text-lg">{link.icon}</span>
+                                {link.name}
+                            </Anchor>
+                        ))}
+                    </Group>
                 </div>
             )}
-        </Card>
+        </div>
     );
 }

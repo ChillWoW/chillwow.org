@@ -1,5 +1,6 @@
 import { IconCalendar, IconMapPin, IconSchool } from "@tabler/icons-react";
 import InfoCard from "./InfoCard";
+import { SimpleGrid } from "@byteform/core";
 
 function getAge(birthDateStr: string): number {
     const today = new Date();
@@ -19,7 +20,12 @@ function getAge(birthDateStr: string): number {
 
 export default function PersonalInfo() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <SimpleGrid
+            breakpoints={{
+                sm: 1,
+                md: 3
+            }}
+        >
             <InfoCard
                 icon={<IconCalendar size={24} />}
                 title="Age"
@@ -37,6 +43,6 @@ export default function PersonalInfo() {
                 title="Location"
                 value="Finland"
             />
-        </div>
+        </SimpleGrid>
     );
 }

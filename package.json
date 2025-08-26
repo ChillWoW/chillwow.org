@@ -10,7 +10,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@byteform/core": "^0.2.0",
+        "@byteform/core": "^0.4.0",
         "@tabler/icons-react": "^3.30.0",
         "dayjs": "^1.11.13",
         "next": "15.1.7",
