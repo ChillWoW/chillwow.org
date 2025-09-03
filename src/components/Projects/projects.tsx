@@ -54,13 +54,6 @@ export const projects: Project[] = [
                 icon: <IconWorldWww />
             }
         ],
-        status: "not-maintained"
-    },
-    {
-        name: "API Monitor",
-        description:
-            "A simple API monitor that allows you to monitor the status of your APIs. Still in the planning phase.",
-        links: [],
-        status: "planned"
+        status: "active"
     }
 ];

@@ -4,7 +4,7 @@
     "": {
       "name": "chillwow-org",
       "dependencies": {
-        "@byteform/core": "^0.4.0",
+        "@byteform/core": "0.5.2",
         "@tabler/icons-react": "^3.30.0",
         "dayjs": "^1.11.13",
         "next": "15.1.7",
@@ -29,7 +29,7 @@
 
     "@babel/runtime": ["@babel/runtime@7.28.2", "", {}, "sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA=="],
 
-    "@byteform/core": ["@byteform/core@0.4.0", "", { "dependencies": { "@floating-ui/react": "^0.27.13", "@tabler/icons-react": "^3.34.0", "clsx": "^2.1.1", "framer-motion": "^12.23.6", "prism-react-renderer": "^2.4.1", "react-textarea-autosize": "^8.5.9", "tailwind-merge": "^3.0.2", "tailwind-scrollbar": "^3.1.0" }, "peerDependencies": { "react": ">=18.0.0", "react-dom": ">=18.0.0" } }, "sha512-zp8u1IQdUVYULA4MRu35Ui2PLzlp3z5B5R8bgpfWaX0Mbhky6tOKE8DigonrYVyRc0AXZyt+dfcHwQAlCsBtEQ=="],
+    "@byteform/core": ["@byteform/core@0.5.2", "", { "dependencies": { "@floating-ui/react": "^0.27.13", "@tabler/icons-react": "^3.34.0", "clsx": "^2.1.1", "framer-motion": "^12.23.6", "prism-react-renderer": "^2.4.1", "react-textarea-autosize": "^8.5.9", "tailwind-merge": "^3.0.2", "tailwind-scrollbar": "^3.1.0" }, "peerDependencies": { "react": ">=18.0.0", "react-dom": ">=18.0.0" } }, "sha512-3G+tY189lDpVVUjfle9eANA7rJMrpFqppO683GzH15TkwaGrSbq1c9Woewz+BTN2/4sh9i/m3KN8ZIhbAr3YMg=="],
 
     "@emnapi/runtime": ["@emnapi/runtime@1.4.3", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ=="],
 
